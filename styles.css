@@ -3,12 +3,11 @@
     margin: 0px;
 }
 header{
-    padding-left: 30px;
     text-align: center;
     font-family: 'Fredoka One', cursive;
     background: #2b4570;
     height: 100px;
-    width: 97.8%;
+    width: 100%;
     line-height: 100px;
     color:white;
     border-bottom: 3px solid black;
