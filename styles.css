@@ -2,6 +2,11 @@
     padding: 0px;
     margin: 0px;
 }
+
+#titulo {
+    font-size: 3rem;
+}
+
 header{
     text-align: center;
     font-family: 'Fredoka One', cursive;
@@ -10,7 +15,7 @@ header{
     width: 100%;
     line-height: 100px;
     color:white;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid black;<p></p>
     font-size: xx-large;
 }
 section{
@@ -63,8 +68,39 @@ footer{
     color:#ffffff
 }
 .base:hover {
-    background-color: #a8d0db;
+    color: #a8d0db;
   }
+
+form {
+    /*border: 1px solid black;*/
+}
+
+form > *{
+    display: block;
+    margin: 0 auto;
+}
+
 .formulario{
+    padding: 10px;
     border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+.formulario:hover {
+    border: 1px solid #000;
+}
+
+.botones {
+    padding: 10px;
+    width: 10%;
+}
+
+.formulario[type='password'] {
+    margin-bottom: 10px;
+}
+
+form > label {
+    margin: 0 auto;
+    position: relative;
 }
