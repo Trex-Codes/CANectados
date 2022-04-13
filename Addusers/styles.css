@@ -10,9 +10,15 @@ body::fullscreen {
 
 form {
 	background: #FFFFFFFF;
+<<<<<<< HEAD
+	padding: 20px;
+	margin: 10px;
+	width: 30%;
+=======
 	padding: 50px;
 	margin: 10px;
 	width: 25%;
+>>>>>>> 158b28979577a2cdc9c46fae424c304ffed0a086
 	height: 39.5rem;
 }
 
@@ -28,7 +34,11 @@ label {
 }
 
 input, textarea {
+<<<<<<< HEAD
+ 	padding: 5px;
+=======
  	padding: 10px;
+>>>>>>> 158b28979577a2cdc9c46fae424c304ffed0a086
  	box-sizing: border-box;
  	margin-bottom: 20px;
 	outline: none;
@@ -96,4 +106,12 @@ form .content) {
 	border: 1px solid black;
 
 	padding: 20px;
+<<<<<<< HEAD
 }
+
+article > label, article > input {
+	display: inline-block;
+}
+=======
+}
+>>>>>>> 158b28979577a2cdc9c46fae424c304ffed0a086
