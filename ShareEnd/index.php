@@ -28,7 +28,7 @@
             <a class="botones" type="button" href="ingreso.php">Ingresar</a>
         </section>
         <footer>
-            <a class="base" href="mailto:sebastianchmantilla@gmail.com">¿Tienes problemas? da click aquí</a>
+            <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>
         </footer>
     </div>
 </body>
