@@ -21,11 +21,14 @@
             <h1 id="bienvenida">CANectados</h1>
             <article>
                 <form action="ingreso.php" method="post">
+
                     <label for="Usuario">Usuario: </label>
                     <input class="formulario" type="text" id="Usuario" name="Usuario" placeholder="Nombre de Usuario o correo electronico">
+
                     <label for="Contraseña">Contraseña: </label>
                     <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña">
-                    <a class="botones" type="button" href="#">Ingresar</a>
+
+                    <input class="botones" name="submitInfo" type="submit" value="Ingresar">
                 </form>
             </article>
         </section>
@@ -34,4 +37,13 @@
         </footer> 
     </div>
 </body>
+    <?php 
+         if(isset($_POST['submitInfo'])) {
+            $InnerUsuario = $_POST['Usuario'];
+
+            if ($InnerUsuario == "Admin" || $InnerUsuario == "admin") {
+                header('Location: http://localhost/Canectados/AddLibros/addTablas.php');
+            }
+        }
+     ?>
 </html>

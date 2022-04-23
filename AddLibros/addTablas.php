@@ -41,7 +41,7 @@
 			$servidor = 'localhost';
 		 	$nombreusuario = 'root';
 		 	$password = '';
-		 	$db = 'pruebalibros';
+		 	$db = 'canectados';
 
 		 	$conexion = new mysqli($servidor, $nombreusuario, $password, $db);
 
