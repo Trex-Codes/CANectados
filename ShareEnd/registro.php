@@ -41,10 +41,7 @@
             font-family: sans-serif;
 
             padding: 10px;
-
         }
-
-
 
     </style>
 </head>
@@ -95,11 +92,17 @@
 
 
 
-            // Conexion DB SQL
-            $servidor = 'localhost';
+            // Conexion DB SQL (LOCALHOST)
+            /*$servidor = 'localhost';
             $user = 'root';
             $password = '';
-            $db = 'canectados';
+            $db = 'canectados';*/
+
+            // Data Hosting 000Webhost.com
+            $servidor = 'localhost';
+            $user = 'id18815618_admindb';
+            $password = 'arRQi#@2|B?*u}n!';
+            $db = 'id18815618_canectados';
 
             // Insersion de datos en tabla MYSQL
             $conexion = new mysqli($servidor, $user, $password, $db);
@@ -119,12 +122,6 @@
             } else {
                 die ("Error al insertar datos, verifique " . " " . $conexion -> error);
             }
-
-
-
-
-
-
 
     }
      ?>
@@ -158,7 +155,7 @@
         </article>
     </section>
     <footer>
-        <a class="base" href="mailto:sebastianchmantilla@gmail.com">¿Tienes problemas? da click aquí</a>
+        <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>
     </footer>  
    </body>
 </html>

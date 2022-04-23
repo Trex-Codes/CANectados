@@ -15,19 +15,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header id="Encabezado">
-        <h7 id="titulo">CANectados</h7>
-    </header>
-    <section>
-        <h1 id="bienvenida">Bienvenido a CANectados</h1>
-        <h2 id="descripcion">Tu biblioteca virtual favorita, diseñada por y para estudiantes</h2>
-        <h3 id="desicion">¿Qué deseas hacer?</h3>
-        <br>
-        <a class="botones" type="button" href="registro.php">Registrarse</a>
-        <a class="botones" type="button" href="ingreso.php">Ingresar</a>
-    </section>
-    <footer>
-        <a class="base" href="mailto:sebastianchmantilla@gmail.com">¿Tienes problemas? da click aquí</a>
-    </footer>
+    <div class="container">
+        <header id="Encabezado">
+            <h7 id="titulo">CANectados</h7>
+        </header>
+        <section>
+            <h1 id="bienvenida">Bienvenido a CANectados</h1>
+            <h2 id="descripcion">Tu biblioteca virtual favorita, diseñada por y para estudiantes</h2>
+            <h3 id="desicion">¿Qué deseas hacer?</h3>
+            <br>
+            <a class="botones" type="button" href="registro.php">Registrarse</a>
+            <a class="botones" type="button" href="ingreso.php">Ingresar</a>
+        </section>
+        <footer>
+            <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>
+        </footer>
+    </div>
 </body>
 </html>
