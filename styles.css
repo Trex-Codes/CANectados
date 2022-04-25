@@ -114,3 +114,8 @@ form > label {
         font: 80px;
     }
 }
+
+.disclaimer {
+    visibility: hidden;
+    display: none;
+}
