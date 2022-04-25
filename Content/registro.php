@@ -87,43 +87,39 @@
                     }   
                 } else {
                     echo "<aside class='correcto'> Datos registrados correctamente </aside>";
+                    
+                    // Conexion DB SQL (LOCALHOST)
+                    /*$servidor = 'localhost';
+                    $user = 'root';
+                    $password = '';
+                    $db = 'canectados';*/
 
+                    // Data Hosting 000Webhost.com
+                    $servidor = 'localhost';
+                    $user ="id18815618_admindb";
+                    $password ="IhdR8gSi%%jA[Gwn";
+                    $db = "id18815618_canectados";
+
+                    // Insersion de datos en tabla MYSQL
+                    $conexion = new mysqli($servidor, $user, $password, $db);
+
+                    if($conexion -> connect_error) {
+                        die ("Conexion fallida" . " " . $conexion -> connect_error);
+                    } else {
+                        // echo "Conexion Exitosa" . "<br>";
+                    }
+
+                    // Insertar datos en tabla pruebaslibros db
+                    $sql = "INSERT INTO Usuarios (IDunico, Nombre, Edad, Password, Nickname, Correo)
+                                        VALUES (NULL, '$nombreusuario', '$EdadUsuario', '$passwordUsuario', '$NicknameUsuario', '$CorreoUsuario')";
+
+                    if ($conexion -> query($sql) === true) {
+                        // echo "Datos insertados correctamente ";
+                    } else {
+                        die ("Error al insertar datos, verifique " . " " . $conexion -> error);
+                    }
                 }
-
-
-
-            // Conexion DB SQL (LOCALHOST)
-            /*$servidor = 'localhost';
-            $user = 'root';
-            $password = '';
-            $db = 'canectados';*/
-
-            // Data Hosting 000Webhost.com
-            $servidor = 'localhost';
-            $user = 'id18815618_admindb';
-            $password = 'arRQi#@2|B?*u}n!';
-            $db = 'id18815618_canectados';
-
-            // Insersion de datos en tabla MYSQL
-            $conexion = new mysqli($servidor, $user, $password, $db);
-
-            if($conexion -> connect_error) {
-                die ("Conexion fallida" . " " . $conexion -> connect_error);
-            } else {
-                // echo "Conexion Exitosa" . "<br>";
             }
-
-            // Insertar datos en tabla pruebaslibros db
-            $sql = "INSERT INTO usuarios (idUsuarios, nombreUsuario, edadUsuario, passwordUsuario, nicknameUsuario, correoUsuario)
-                                VALUES (NULL, '$nombreusuario', '$EdadUsuario', '$passwordUsuario', '$NicknameUsuario', '$CorreoUsuario')";
-
-            if ($conexion -> query($sql) === true) {
-                // echo "Datos insertados correctamente ";
-            } else {
-                die ("Error al insertar datos, verifique " . " " . $conexion -> error);
-            }
-
-    }
      ?>
 
     <header id="Encabezado">
