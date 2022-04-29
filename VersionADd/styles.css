@@ -1,0 +1,121 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+div {
+    width:100vw;
+    height: 100vh; 
+}
+#titulo {
+    font-size: 3rem;
+}
+header{
+    box-sizing:border-box;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    background: #2b4570;
+    height: 100px;
+    width: 100%;
+    line-height: 100px;
+    color:white;
+    border-bottom: 3px solid black;
+    font-size: xx-large;
+}
+section{
+    box-sizing:border-box;
+    padding-bottom: 10px;
+    font-family: 'Patrick Hand', cursive;
+    background: #a8d0db;
+    text-align: center;
+    padding-top: 15vh;
+    width: 100%;
+    height: 90.5vh
+}
+#bienvenida{
+    font-size: 80px;
+}
+#descripcion{
+    font-size: 40px;
+}
+#desicion{
+    font-size: 30px;
+}
+.botones{
+    font-family: 'Patrick Hand', cursive;
+    transition: background-color .5s;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+    width: 10%;
+}
+.botones:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+  }
+footer{
+    box-sizing:border-box;
+    font-family: 'Fredoka One', cursive;
+    border-top: 3px solid black;
+    background: #7180ac;
+    height: 100px;
+    width: 100%;
+    text-align: center;
+    line-height: 100px;
+    color:white;
+    font-size: xx-large;
+}
+.base{
+    transition: background-color .5s;
+    text-decoration: none;
+    color:#ffffff
+}
+.base:hover {
+    color: #a8d0db;
+  }
+form > *{
+    display: block;
+    margin: 0 auto;
+}
+.formulario{
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+.formulario:hover {
+    border: 1px solid #000;
+}
+.formulario[type='password'] {
+    margin-bottom: 10px;
+}
+form > label {
+    margin: 0 auto;
+    position: relative;
+}
+@media screen and (max-width:1000px) {
+    footer{
+        font-size: 1.3rem;
+    }
+    .botones{
+        width: 20%;
+    }
+}
+@media screen and (max-width:500px) {
+    .botones{
+        font-size: 12px;
+    }
+    section{
+        font: 80px;
+    }
+}
+
+.disclaimer {
+    visibility: hidden;
+    display: none;
+}
