@@ -1,4 +1,3 @@
-<!-- es el mismo catalogo.php -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,16 +16,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
 </head>
-		<div class="container-fluid">
+<body>
+    <div class="container-fluid">
         <article>
             <header id="Encabezado" class="header2">
                 <h7 id="titulo">CANectados</h7>
             </header>
             <section>
-               		<!-- <p class="Welcome">Bienvenido <?php echo $user->getNombre(); ?></p> <br> -->
-                	<!-- <p class="close-session"> -->
-	               		<a href="includes/logout.php">Cerrar sesion </a>
-                	<!-- </p> -->
                 <div id="left" class="nexp">
                     <img>
                     <div class="bdata"> 
@@ -165,5 +161,6 @@
             </footer>
         </article>
     </div>
+</body>
 </body>
 </html>

@@ -55,9 +55,7 @@ if(isset($_SESSION['user'])) {
 			$user->setUser($userForm);
 
 			include_once 'vistas/home.php'; // file libros.php
-
-
-
+            
 		} else {
 			 // Conexion DB SQL (LOCALHOST)
         $servidor = 'localhost';
