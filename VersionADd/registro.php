@@ -55,7 +55,7 @@
             $EdadUsuario = $_POST['EdadUsuario'];
             $NicknameUsuario = $_POST['NicknameUsuario'];
             $passwordUsuario = $_POST['passwordUsuario'];
-            $passwordUsuarioEncript = md5($_POST['passwordUsuario']);
+            $passwordUsuarioEncript = md5($passwordUsuario);
             $CorreoUsuario = $_POST['CorreoUsuario'];
 
             $Campos = array();

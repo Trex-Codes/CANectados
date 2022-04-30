@@ -1,3 +1,21 @@
+  <?php 
+
+    // Conexion DB SQL (LOCALHOST)
+    $servidor = 'localhost';
+    $user = 'root';
+    $password = '';
+    $db = 'canectados';
+
+    $conexion = new mysqli($servidor, $user, $password, $db);
+
+
+    if($conexion -> connect_error) {
+        die ("Conexion fallida" . " " . $conexion -> connect_error);
+    } else {
+        // echo "Conexion Exitosa" . "<br>";
+    }
+    ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,6 +33,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
+    <style>
+        table {
+            border: 1px solid red;
+            padding: 5px;
+        }
+
+        table tr td {
+            border: 1px solid black;
+
+            font-family: sans-serif;
+            padding: 10px;
+        }
+
+        .itemSQL {
+            font-weight: bold;
+            color: #299748;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -24,47 +60,63 @@
             </header>
             <section>
                 <div id="left" class="nexp">
-                    <img>
-                    <div class="bdata"> 
-                        <a class="nombre" href="libro.php">Nombre</a>
-                        <p>Autor</p>
-                        <p>Género</p>
-                        <p>Edad recomendada</p>
-                        <p>Número de páginas</p>
-                        <p>Número de visitas</p>
+                    <?php    
+                    $sql = "SELECT * FROM libros where idLibros = 1";
+                    $query = mysqli_query($conexion,$sql);
+                    $mostrar = mysqli_fetch_array($query); ?>
+                    <img src="">
+                    <div class="bdata">
+                        <a class="nombre" href="libro.php">Nombre: <?php echo $mostrar[2] ?></a>
+                        <p>Autor: <?php echo $mostrar[3] ?></p>
+                        <p>Género: <?php echo $mostrar[4] ?></p>
+                        <p>Edad recomendada: </p>
+                        <p>Número de páginas: <?php echo $mostrar[5] ?></p>
+                        <p>Número de visitas: </p>
                     </div>
                 </div>
                 <div id="rigth" class="nexp">
+                    <?php    
+                    $sql = "SELECT * FROM libros where idLibros = 2";
+                    $query = mysqli_query($conexion,$sql);
+                    $mostrar = mysqli_fetch_array($query); ?>
                     <img>
                     <div class="bdata"> 
-                        <a class="nombre" href="libro.php">Nombre</a>
-                        <p>Autor</p>
-                        <p>Género</p>
-                        <p>Edad recomendada</p>
-                        <p>Número de páginas</p>
-                        <p>Número de visitas</p>
+                        <a class="nombre" href="libro.php">Nombre: <?php echo $mostrar[2] ?></a>
+                        <p>Autor: <?php echo $mostrar[3] ?></p>
+                        <p>Género <?php echo $mostrar[4] ?></p>
+                        <p>Edad recomendada: </p>
+                        <p>Número de páginas: <?php echo $mostrar[5]; ?></p>
+                        <p>Número de visitas: </p>
                     </div>
                 </div>
                 <div id="left" class="nexp">
+                    <?php    
+                    $sql = "SELECT * FROM libros where idLibros = 3";
+                    $query = mysqli_query($conexion,$sql);
+                    $mostrar = mysqli_fetch_array($query); ?>
                     <img>
                     <div class="bdata"> 
-                        <a class="nombre" href="libro.php">Nombre</a>
-                        <p>Autor</p>
-                        <p>Género</p>
-                        <p>Edad recomendada</p>
-                        <p>Número de páginas</p>
-                        <p>Número de visitas</p>
+                        <a class="nombre" href="libro.php">Nombre: <?php echo $mostrar[2] ?></a>
+                        <p>Autor: <?php echo $mostrar[3] ?></p>
+                        <p>Género <?php echo $mostrar[4] ?></p>
+                        <p>Edad recomendada: </p>
+                        <p>Número de páginas: <?php echo $mostrar[5]; ?></p>
+                        <p>Número de visitas: </p>
                     </div>
                 </div>
                 <div id="rigth" class="nexp">
+                    <?php    
+                    $sql = "SELECT * FROM libros where idLibros = 4";
+                    $query = mysqli_query($conexion,$sql);
+                    $mostrar = mysqli_fetch_array($query); ?>
                     <img>
                     <div class="bdata"> 
-                        <a class="nombre" href="libro.php">Nombre</a>
-                        <p>Autor</p>
-                        <p>Género</p>
-                        <p>Edad recomendada</p>
-                        <p>Número de páginas</p>
-                        <p>Número de visitas</p>
+                        <a class="nombre" href="libro.php">Nombre: <?php echo $mostrar[2] ?></a>
+                        <p>Autor: <?php echo $mostrar[3] ?></p>
+                        <p>Género <?php echo $mostrar[4] ?></p>
+                        <p>Edad recomendada: </p>
+                        <p>Número de páginas: <?php echo $mostrar[5]; ?></p>
+                        <p>Número de visitas: </p>
                     </div>
                 </div>
                 <div id="left" class="nexp">
@@ -162,5 +214,8 @@
         </article>
     </div>
 </body>
-</body>
 </html>
+
+<?php 
+
+?>
