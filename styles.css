@@ -3,14 +3,14 @@
     margin: 0px;
     box-sizing:border-box;
 }
-div {
-    width:100vw;
-    height: 100vh; 
+article{
+    height: 100%;
 }
 #titulo {
     font-size: 3rem;
 }
 header{
+    overflow: hidden;
     box-sizing:border-box;
     text-align: center;
     font-family: 'Fredoka One', cursive;
@@ -28,9 +28,8 @@ section{
     font-family: 'Patrick Hand', cursive;
     background: #a8d0db;
     text-align: center;
-    padding-top: 15vh;
+    padding-top: 10px;
     width: 100%;
-    height: 90.5vh
 }
 #bienvenida{
     font-size: 80px;
@@ -59,6 +58,7 @@ section{
     background-color: #ffffff;
   }
 footer{
+    overflow: hidden;
     box-sizing:border-box;
     font-family: 'Fredoka One', cursive;
     border-top: 3px solid black;
@@ -98,6 +98,48 @@ form > label {
     margin: 0 auto;
     position: relative;
 }
+.header2{
+    position: fixed;
+}
+.exp{
+    padding-top: 8%;
+    background: #a8d0db;
+    padding-bottom: 2%;
+    text-align: left;
+    width: 100%;
+    float: left;
+    padding-left: 10%
+}
+.nexp{
+    padding-top: 8%;
+    background: #a8d0db;
+    padding-bottom: 2%
+}
+#left{
+    text-align: left;
+    width: 50%;
+    float: left;
+    padding-left: 10%;
+}
+#rigth{
+    text-align: left;
+    width: 50%;
+    float: right;
+    padding-right: 10%;
+}
+.nombre{
+    transition: background-color .5s;
+    text-decoration: none;
+    color:black
+}
+.nombre:hover {
+    color: white;
+  }
+#descargar{
+    padding-left: 10%;
+    background: #a8d0db;
+    padding-bottom: 2%;
+}
 @media screen and (max-width:1000px) {
     footer{
         font-size: 1.3rem;
@@ -114,7 +156,6 @@ form > label {
         font: 80px;
     }
 }
-
 .disclaimer {
     visibility: hidden;
     display: none;
