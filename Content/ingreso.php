@@ -66,16 +66,16 @@
 
 
         // Conexion DB SQL (LOCALHOST)
-        /*$servidor = 'localhost';
+        $servidor = 'localhost';
         $user = 'root';
         $password = '';
-        $db = 'canectados';*/
+        $db = 'canectados';
 
         // Data Hosting 000Webhost.com
-        $servidor = 'localhost';
-        $user ="id18815618_admindb";
-        $password ="IhdR8gSi%%jA[Gwn";
-        $db = "id18815618_canectados";
+        // $servidor = 'localhost';
+        // $user ="id18815618_admindb";
+        // $password ="IhdR8gSi%%jA[Gwn";
+        // $db = "id18815618_canectados";
 
         // Insersion de datos en tabla MYSQL
         $conexion = new mysqli($servidor, $user, $password, $db);

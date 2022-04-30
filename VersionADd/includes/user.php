@@ -13,6 +13,7 @@
 		public function userExists($user, $pass) {
 
 			$md5pass = md5($pass);
+			// $md5pass = ($pass);
 
 	        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE nicknameUsuario = :user AND passwordUsuario = :pass');
 

@@ -11,17 +11,13 @@ div {
     font-size: 3rem;
 }
 header{
-    box-sizing:border-box;
-    text-align: center;
     font-family: 'Fredoka One', cursive;
     background: #2b4570;
-    height: 100px;
-    width: 100%;
-    line-height: 100px;
     color:white;
     border-bottom: 3px solid black;
     font-size: xx-large;
 }
+
 section{
     box-sizing:border-box;
     padding-bottom: 10px;
@@ -118,4 +114,9 @@ form > label {
 .disclaimer {
     visibility: hidden;
     display: none;
+}
+
+.disclaimer {
+    display: none;
+    visibility: hidden;
 }

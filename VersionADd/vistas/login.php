@@ -65,48 +65,5 @@
             <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>
         </footer> 
     </div>
-   <!--  <?php 
-
-        // Conexion DB SQL (LOCALHOST)
-        // $servidor = 'localhost';
-        // $user = 'root';
-        // $password = '';
-        // $db = 'canectados';
-
-        // Data Hosting 000Webhost.com
-        // $servidor = 'localhost';
-        // $user ="id18815618_admindb";
-        // $password ="IhdR8gSi%%jA[Gwn";
-        // $db = "id18815618_canectados";
-
-        // Insersion de datos en tabla MYSQL
-        // $conexion = new mysqli($servidor, $user, $password, $db);
-
-        // if($conexion -> connect_error) {
-        //     die ("Conexion fallida" . " " . $conexion -> connect_error);
-        // } else {
-        //     echo "Conexion Exitosa" . "<br>";
-        // }
-
-
-        // // Consultar para verificar si datos existen 
-
-        // if(isset($_POST['submitInfo'])) {
-        //     $username = $_POST['username'];
-        //     $password = $_POST['password'];
-            
-        //     $validar = "SELECT * FROM usuarios WHERE nicknameUsuario = '$username' || passwordUsuario = '$password'";
-        //     $validando = $conexion->query($validar);
-
-
-        //     if ($validando->num_rows > 0) {
-        //         echo "Ya esta en uso el usuario";
-        //     } else {
-        //         echo "Usuario no Existente";
-        //     }
-
-
-        // }
-     ?> -->
 </body>
 </html>
