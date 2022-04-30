@@ -15,18 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
-    <style>
-        section{
-            box-sizing:border-box;
-            padding-bottom: 207px;
-            font-family: 'Patrick Hand', cursive;
-            background: #a8d0db;
-            text-align: center;
-            padding-top: 207px;
-            width: 100%;
-            height: auto
-}
-    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -35,17 +23,28 @@
                 <h7 id="titulo">CANectados</h7>
             </header>
             <section>
-                <h1 id="bienvenida">Bienvenido a CANectados</h1>
-                <h2 id="descripcion">Tu biblioteca virtual favorita, diseñada por y para estudiantes</h2>
-                <h3 id="desicion">¿Qué deseas hacer?</h3>
-                <br>
-                <a class="botones" type="button" href="registro.php">Registrarse</a>
-                <a class="botones" type="button" href="ingreso.php">Ingresar</a>
+                <div class="exp">
+                    <img>
+                    <div class="sdata"> 
+                        <p>Nombre</p>
+                        <p>Autor</p>
+                        <p>Género</p>
+                        <p>Edad recomendada</p>
+                        <p>Número de páginas</p>
+                        <p>Número de visitas</p>
+                    </div>
+                </div>
             </section>
+            <div id="descargar" >
+                <button id="dwlbtn" class="botones" type="button">
+                    Descargar
+                </button>
+            </div>
             <footer class="footer2">
                 <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>
             </footer>
         </article>
     </div>
+</body>
 </body>
 </html>

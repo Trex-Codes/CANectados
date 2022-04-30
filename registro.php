@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <title>Registro CANectados</title>
+    <link href="./bootstrap-5/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src= "./bootstrap-5/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,46 +12,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
-
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <style>
-
         section {
             height: 100%;
-            padding: 0px;
-
-            padding-bottom: 30px;
-        }
+            padding-bottom: 20px;
+            }
 
         .botones {
-                margin-top: 15px;
+            margin-top: 15px;
+            text-align: center;
         }
-        
-        .error {
-            background: #DC5454;
-
-            font-size: 12px;
+        section{
+            box-sizing:border-box;
+            padding-bottom: 98px;
+            font-family: 'Patrick Hand', cursive;
+            background: #a8d0db;
+            text-align: center;
+            padding-top: 98px;
+            width: 100%;
+            height: auto
         }
-
-        .correcto {
-            background-color: #3B923D;
-        }
-
-        .error, .correcto {
-             color: #fff;
-
-            font-weight: bold;
-            font-family: sans-serif;
-
-            padding: 10px;
-        }
-
     </style>
 </head>
 <body>
-    <?php 
+    <div class="container-fluid">
+        <?php 
 
         // Validacion de datos o formularios
-
         if(isset($_POST['submitInfo'])) {
             $nombreusuario = $_POST['NombreUsuario'];
             $EdadUsuario = $_POST['EdadUsuario'];
@@ -59,100 +49,43 @@
 
             $Campos = array();
 
-            if($nombreusuario == ""){
-                    array_push($Campos, "El nombre no pude estar vacío");
-                }
+            $datos = array($nombreusuario, $EdadUsuario, $NicknameUsuario, $passwordUsuario, $CorreoUsuario);
 
-                if($EdadUsuario == "" ){
-                    array_push($Campos, "La edad no puede estar vacío");
-                }
-
-                if($NicknameUsuario == ""){
-                    array_push($Campos, "El correo no puede estar vacio");
-                }
-
-                if($passwordUsuario =="") {
-                    array_push($Campos, "La contraseña no puede estar vacia");
-                }
-
-                if($CorreoUsuario == "") {
-                    array_push($Campos, "El correo no puede estar vacio");
-                }
-
-
-                if (count($Campos) > 0) {
-                    for ($i=0; $i < count($Campos); $i++) { 
-                        echo "<aside class='error'>" . $Campos[$i] . "<br>";
-                        echo "</aside>";
-                    }   
-                } else {
-                    echo "<aside class='correcto'> Datos registrados correctamente </aside>";
-                    
-                    // Conexion DB SQL (LOCALHOST)
-                    /*$servidor = 'localhost';
-                    $user = 'root';
-                    $password = '';
-                    $db = 'canectados';*/
-
-                    // Data Hosting 000Webhost.com
-                    $servidor = 'localhost';
-                    $user ="id18815618_admindb";
-                    $password ="IhdR8gSi%%jA[Gwn";
-                    $db = "id18815618_canectados";
-
-                    // Insersion de datos en tabla MYSQL
-                    $conexion = new mysqli($servidor, $user, $password, $db);
-
-                    if($conexion -> connect_error) {
-                        die ("Conexion fallida" . " " . $conexion -> connect_error);
-                    } else {
-                        // echo "Conexion Exitosa" . "<br>";
-                    }
-
-                    // Insertar datos en tabla pruebaslibros db
-                    $sql = "INSERT INTO Usuarios (IDunico, Nombre, Edad, Password, Nickname, Correo)
-                                        VALUES (NULL, '$nombreusuario', '$EdadUsuario', '$passwordUsuario', '$NicknameUsuario', '$CorreoUsuario')";
-
-                    if ($conexion -> query($sql) === true) {
-                        // echo "Datos insertados correctamente ";
-                    } else {
-                        die ("Error al insertar datos, verifique " . " " . $conexion -> error);
-                    }
-                }
+            for ($i=0; $i < count($datos) ; $i++) { 
+                echo $datos[$i] . "<br>";
             }
+        }
      ?>
-
-    <header id="Encabezado">
+    <header id="Encabezado" class="header2">
         <h7 id="titulo">CANectados</h7>
     </header>
     <section>
         <h1 id="bienvenida">CANectados</h1>
-        <article class="content">
-
+        <article>
             <form action="registro.php" method="post">
 
                 <label for="Nombre">Nombre: </label>
-                <input class="formulario" type="text" id="Nombre" name="NombreUsuario" placeholder="Nombre" >
+                <input class="formulario" type="text" id="Nombre" name="NombreUsuario" placeholder="Nombre" required="">
 
                 <label for="Edad">Edad: </label>
-                <input class="formulario" type="number" id="Edad" name="EdadUsuario" placeholder="Edad" min="0" max="100" >
+                <input class="formulario" type="number" id="Edad" name="EdadUsuario" placeholder="Edad" min="0" max="100" required="">
 
                 <label for="Usuario">Nickname: </label>
-                <input class="formulario" type="text" id="Usuario" name="NicknameUsuario" placeholder="Nombre de Usuario" >
+                <input class="formulario" type="text" id="Usuario" name="NicknameUsuario" placeholder="Nombre de Usuario" required="">
 
                 <label for="Contraseña">Contraseña: </label>
-                <input class="formulario" type="password" id="password" name="passwordUsuario" placeholder="Contraseña" >
+                <input class="formulario" type="password" id="password" name="passwordUsuario" placeholder="Contraseña" required="">
 
                 <label for="Correo">Correo: </label>
-                <input class="formulario" type="email" id="Correo" name="CorreoUsuario" placeholder="Correo electronico" >
+                <input class="formulario" type="email" id="Correo" name="CorreoUsuario" placeholder="Correo electronico" required="">
 
                 <input type="submit" class="botones" name="submitInfo" value="registrarse">
             </form>
         </article>
     </section>
-    <footer>
+    <footer class="footer2">
         <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>
     </footer>  
-   </body>
+    </div>
+</body>
 </html>
- 
