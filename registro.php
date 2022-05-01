@@ -81,6 +81,7 @@
 
                 <input type="submit" class="botones" name="submitInfo" value="registrarse">
             </form>
+            <a class="redirex" type="button" href="ingreso.php">Ya tienes una cuenta?, Puedes iniciar sesión aquí</a>
         </article>
     </section>
     <footer class="footer2">

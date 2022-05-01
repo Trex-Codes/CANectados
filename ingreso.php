@@ -39,9 +39,10 @@
                     <input class="formulario" type="text" id="Usuario" name="Usuario" placeholder="Nombre de Usuario o correo electronico">
                     <label for="Contraseña">Contraseña: </label>
                     <input class="formulario" type="password" id="password" name="password" placeholder="Contraseña">
-                    <a class="botones" type="button" href="catalogo.php">Ingresar</a>
+                    <a class="botones" type="button" href="#">Ingresar</a>
                 </form>
             </article>
+            <a class="redirex" type="button" href="registro.php">Aún no tienes cuenta?, puedes crearla aquí</a>
         </section>
         <footer class="footer2">
             <a class="base" href="mailto:canectadosbog@gmail.com">¿Tienes problemas? da click aquí</a>

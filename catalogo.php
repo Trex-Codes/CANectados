@@ -3,6 +3,7 @@
 <head>
     <title>CANectados</title>
     <meta charset="utf-8">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <meta name="author" content="Alumnos 11 Colegio Antonio Nariño H.H. Corazonistas (Bogotá)">
     <meta name="description" content="Sitio interactivo creado con el fin de ser biblioteca virtual para toda la comunidad">
     <meta name="keywords" content="CANectados, Alumnos 11, Antonio Nariño H.H. Corazonistas">
@@ -23,6 +24,23 @@
                 <h7 id="titulo">CANectados</h7>
             </header>
             <section>
+                <nav>
+                    <input type="checkbox" id="check">
+                    <label for="check">
+                    <i class=checkbtn class="fas fa-bars"></i>
+                    <style>
+                        .checkbtn{
+                            display: none;
+                        }
+                    </style>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Portafolio</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </nav>
                 <div id="left" class="nexp">
                     <img>
                     <div class="bdata"> 
