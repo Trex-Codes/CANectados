@@ -58,7 +58,7 @@
                     <input class="botones" name="submitInfo" type="submit" value="Ingresar">
                 </form>
 
-                <button class="btnAdmin"><a href="tablasLibros.php">funcion Admin</a></button>
+                <button class="btnAdmin"><a href=".//infotablas.php">funcion Admin</a></button>
             </article>
         </section>
         <footer>
