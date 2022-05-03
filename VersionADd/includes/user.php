@@ -15,7 +15,7 @@
 			$md5pass = md5($pass);
 			// $md5pass = ($pass);
 
-	        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE nicknameUsuario = :user AND passwordUsuario = :pass');
+	        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE User = :user AND Password = :pass');
 
 	        $query->execute(['user' => $user, 'pass' => $md5pass]);
 
@@ -30,13 +30,13 @@
 
   		public function setUser($user){
 
-	        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE nicknameUsuario = :user');
+	        $query = $this->connect()->prepare('SELECT * FROM usuarios WHERE User = :user');
 
 	        $query->execute(['user' => $user]);
 	        
 	         foreach ($query as $currentUser) {
-            	$this->nombre = $currentUser['nombreUsuario'];
-            	$this->usename = $currentUser['nicknameUsuario'];
+            	$this->nombre = $currentUser['Nombre'];
+            	$this->usename = $currentUser['User'];
         }
     }
 

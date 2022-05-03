@@ -13,6 +13,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
+    <style type="text/css">
+            section{
+            box-sizing:border-box;
+            padding-bottom: 191px;
+            font-family: 'Patrick Hand', cursive;
+            background: #a8d0db;
+            text-align: center;
+            padding-top: 191px;
+            width: 100%;
+            height: auto
+}
+</style>
 </head>
 <body>
     <div class="container">

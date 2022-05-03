@@ -9,10 +9,16 @@ class DB{
 
     public function __construct(){
         $this->host     = 'localhost';
-        $this->db       = 'canectados';
+        $this->db       = 'id18815618_canectados';
         $this->user     = 'root';
         $this->password = "";
         $this->charset  = 'utf8mb4';
+
+        // $this->host     = 'localhost';
+        // $this->db       = 'id18815618_canectados';
+        // $this->user     = 'id18815618_admindb';
+        // $this->password = "IhdR8gSi%%jA[Gwn";
+        // $this->charset  = 'utf8mb4';
     }
 
     function connect(){

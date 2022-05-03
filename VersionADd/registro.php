@@ -43,6 +43,36 @@
             padding: 10px;
         }
 
+         section {
+            height: 100%;
+            padding-bottom: 20px;
+            }
+
+        .botones {
+            margin-top: 15px;
+            text-align: center;
+        }
+        section{
+            box-sizing:border-box;
+            padding-bottom: 98px;
+            font-family: 'Patrick Hand', cursive;
+            background: #a8d0db;
+            text-align: center;
+            padding-top: 98px;
+            width: 100%;
+            height: auto
+        }
+        .redirex{
+            transition: background-color .5s;
+            text-decoration: none;
+            color:black
+        }
+
+        .redirex:hover {
+            color: white;
+        }
+
+
     </style>
 </head>
 <body>
@@ -93,7 +123,7 @@
                     $servidor = 'localhost';
                     $user = 'root';
                     $password = '';
-                    $db = 'canectados';
+                    $db = 'id18815618_canectados';
 
                     // Data Hosting 000Webhost.com
                     // $servidor = 'localhost';
@@ -111,8 +141,8 @@
                     }
 
                     // Insertar datos en tabla pruebaslibros db
-                    $sql = "INSERT INTO usuarios (idUsuarios, nombreUsuario, edadUsuario, passwordUsuario, passwordUsuariosEncrip, nicknameUsuario, correoUsuario)
-                                        VALUES (NULL, '$nombreusuario', '$EdadUsuario', '$passwordUsuarioEncript', '$passwordUsuario', '$NicknameUsuario', '$CorreoUsuario')";
+                    $sql = "INSERT INTO usuarios (IDunico , Nombre, Edad, Password, User, Correo)
+                                        VALUES (NULL, '$nombreusuario', '$EdadUsuario', '$passwordUsuarioEncript',  '$NicknameUsuario', '$CorreoUsuario')";
 
 
                     if ($conexion -> query($sql) === true) {
@@ -150,6 +180,8 @@
 
                 <input type="submit" class="botones" name="submitInfo" value="registrarse">
             </form>
+            <a class="redirex" type="button" href="index.php">Regresar</a>
+
         </article>
     </section>
     <footer>

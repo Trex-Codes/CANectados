@@ -61,7 +61,7 @@ if(isset($_SESSION['user'])) {
         $servidor = 'localhost';
         $user = 'root';
         $password = '';
-        $db = 'canectados';
+        $db = 'id18815618_canectados';
 
         // Data Hosting 000Webhost.com
         // $servidor = 'localhost';
@@ -85,7 +85,7 @@ if(isset($_SESSION['user'])) {
             $usuario = $_POST['username'];
             $password = $_POST['password'];
             
-            $validar = "SELECT * FROM usuarios WHERE nicknameUsuario = '$usuario' || passwordUsuario = '$password'";
+            $validar = "SELECT * FROM usuarios WHERE User = '$usuario' || Password = '$password'";
             $validando = $conexion->query($validar);
 
 

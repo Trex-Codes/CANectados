@@ -17,6 +17,18 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <style type="text/css">
+
+         section{
+            box-sizing:border-box;
+            padding-bottom: 191px;
+            font-family: 'Patrick Hand', cursive;
+            background: #a8d0db;
+            text-align: center;
+            padding-top: 191px;
+            width: 100%;
+            height: auto
+            }
+
         .btnAdmin {
             background-color: #5B95BE;
     
@@ -30,6 +42,25 @@
             outline: none;
             text-decoration: none;
         }
+
+        .redirex{
+            transition: background-color .5s;
+            text-decoration: none;
+            color:black
+        }
+
+        article {
+            height: 20%;
+        }
+
+        .redirex:hover {
+            color: white;
+        }
+
+        section {
+            padding: 140px;
+        }
+
     </style>
 </head>
 <body>
@@ -57,6 +88,9 @@
 
                     <input class="botones" name="submitInfo" type="submit" value="Ingresar">
                 </form>
+
+                    <a class="redirex" type="button" href="index.php">Regresar</a> <br>
+
 
                 <button class="btnAdmin"><a href=".//infotablas.php">funcion Admin</a></button>
             </article>

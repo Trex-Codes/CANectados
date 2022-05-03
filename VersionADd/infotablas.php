@@ -93,16 +93,16 @@
 
 
 		 	// Conexion DB SQL (LOCALHOST)
-			/*$servidor = 'localhost';
+			$servidor = 'localhost';
             $user = 'root';
             $password = '';
-            $db = 'canectados';*/
+            $db = 'id18815618_canectados';
 
 			 // Data Hosting 000Webhost.com
-            $servidor = 'localhost';
-            $user ="id18815618_admindb";
-            $password ="IhdR8gSi%%jA[Gwn";
-            $db = "id18815618_canectados";
+            // $servidor = 'localhost';
+            // $user ="id18815618_admindb";
+            // $password ="IhdR8gSi%%jA[Gwn";
+            // $db = "id18815618_canectados";
 
 			$conexion = new mysqli($servidor, $user, $password, $db);
 
@@ -113,8 +113,8 @@
 		 	}
 
 		 	// Insertar datos en tabla pruebaslibros db
-		 	$sql = "INSERT INTO Libros (nombre, autor, generoLibro, Numeropaginas)
-		 						VALUES ('$nombreLibro', '$autorLibro', '$generoLibro', '$paginasLibro')";
+		 	$sql = "INSERT INTO libros (IDlibros , nombre, autor, generoLibro, Numeropaginas)
+		 						VALUES (NULL, '$nombreLibro', '$autorLibro', '$generoLibro', '$paginasLibro')";
 
 		 	if ($conexion -> query($sql) === true) {
 		 		echo "<p class='textSend'> Datos insertados correctamente </p>";
