@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 02-05-2022 a las 22:56:14
--- Versión del servidor: 10.5.12-MariaDB
--- Versión de PHP: 7.3.32
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 03-05-2022 a las 04:00:52
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,10 +24,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Generos`
+-- Estructura de tabla para la tabla `generos`
 --
 
-CREATE TABLE `Generos` (
+CREATE TABLE `generos` (
   `IDgeneros` int(11) NOT NULL,
   `aventura` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
   `ciencia ficcion` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
@@ -52,10 +51,10 @@ CREATE TABLE `imagenes` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Libros`
+-- Estructura de tabla para la tabla `libros`
 --
 
-CREATE TABLE `Libros` (
+CREATE TABLE `libros` (
   `IDlibros` int(11) NOT NULL,
   `nombre` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
   `autor` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
@@ -65,31 +64,26 @@ CREATE TABLE `Libros` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `Libros`
+-- Volcado de datos para la tabla `libros`
 --
 
-INSERT INTO `Libros` (`IDlibros`, `nombre`, `autor`, `generoLibro`, `Numeropaginas`, `FechaIngresoDato`) VALUES
+INSERT INTO `libros` (`IDlibros`, `nombre`, `autor`, `generoLibro`, `Numeropaginas`, `FechaIngresoDato`) VALUES
 (1, 'Caperucita Roja', 'Charles Perrault', 'Cuento de hadas', 34, '2022-05-02 17:35:24'),
-(2, 'Satanas', 'Mario Mendoza', 'Ficcion', 754, '2022-05-02 18:47:44');
+(2, 'Satanas', 'Mario Mendoza', 'Ficción', 754, '2022-05-03 00:20:50'),
+(3, 'Hamlet', 'William Shakespeare', 'Dramático', 322, '2022-05-03 00:32:55'),
+(4, 'Peter Pan', 'James Matthew Barrie', 'Fantasía ', 322, '2022-05-03 00:36:34'),
+(5, 'Don Quijote de la Mancha', 'Miguel de Cervantes', 'novela realista', 478, '2022-05-03 00:47:35'),
+(6, 'Fundamentación de la metafísica de las costum', 'Manuel Kant', 'Filosofía ', 100, '2022-05-03 01:00:01'),
+(7, 'Viaje al centro de la tierra', 'Julio Verne', 'Ficción ', 317, '2022-05-03 01:11:25'),
+(8, 'La República', 'Platón ', 'Filosofía ', 226, '2022-05-03 01:22:09');
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `LibrosPDF`
+-- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `LibrosPDF` (
-  `IDlibros` int(11) NOT NULL,
-  `ruta` varchar(45) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `Usuarios`
---
-
-CREATE TABLE `Usuarios` (
+CREATE TABLE `usuarios` (
   `IDunico` int(11) NOT NULL,
   `Nombre` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `Edad` int(2) NOT NULL,
@@ -100,21 +94,20 @@ CREATE TABLE `Usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Volcado de datos para la tabla `Usuarios`
+-- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `Usuarios` (`IDunico`, `Nombre`, `Edad`, `Password`, `User`, `Correo`, `FechaIngresoDato`) VALUES
-(1, 'Carlos Aguilar', 58, '202cb962ac59075b964b07152d234b70', 'cpAguilar', 'Auiar@gmail.com', '2022-05-02 17:03:39'),
-(2, 'gamba', 17, '900150983cd24fb0d6963f7d28e17f72', 'gambito', 'gambita@gmail.com', '2022-05-02 18:42:18');
+INSERT INTO `usuarios` (`IDunico`, `Nombre`, `Edad`, `Password`, `User`, `Correo`, `FechaIngresoDato`) VALUES
+(1, 'Carlos Aguilar', 28, '202cb962ac59075b964b07152d234b70', 'cpaguilar', 'clpaguilar@gmail.com', '2022-05-02 23:15:23');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `Generos`
+-- Indices de la tabla `generos`
 --
-ALTER TABLE `Generos`
+ALTER TABLE `generos`
   ADD PRIMARY KEY (`IDgeneros`);
 
 --
@@ -124,21 +117,15 @@ ALTER TABLE `imagenes`
   ADD PRIMARY KEY (`IDimagenes`);
 
 --
--- Indices de la tabla `Libros`
+-- Indices de la tabla `libros`
 --
-ALTER TABLE `Libros`
+ALTER TABLE `libros`
   ADD PRIMARY KEY (`IDlibros`);
 
 --
--- Indices de la tabla `LibrosPDF`
+-- Indices de la tabla `usuarios`
 --
-ALTER TABLE `LibrosPDF`
-  ADD PRIMARY KEY (`IDlibros`);
-
---
--- Indices de la tabla `Usuarios`
---
-ALTER TABLE `Usuarios`
+ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`IDunico`);
 
 --
@@ -146,9 +133,9 @@ ALTER TABLE `Usuarios`
 --
 
 --
--- AUTO_INCREMENT de la tabla `Generos`
+-- AUTO_INCREMENT de la tabla `generos`
 --
-ALTER TABLE `Generos`
+ALTER TABLE `generos`
   MODIFY `IDgeneros` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -158,22 +145,16 @@ ALTER TABLE `imagenes`
   MODIFY `IDimagenes` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `Libros`
+-- AUTO_INCREMENT de la tabla `libros`
 --
-ALTER TABLE `Libros`
-  MODIFY `IDlibros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `libros`
+  MODIFY `IDlibros` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT de la tabla `LibrosPDF`
+-- AUTO_INCREMENT de la tabla `usuarios`
 --
-ALTER TABLE `LibrosPDF`
-  MODIFY `IDlibros` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `Usuarios`
---
-ALTER TABLE `Usuarios`
-  MODIFY `IDunico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `usuarios`
+  MODIFY `IDunico` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
