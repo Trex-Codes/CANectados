@@ -140,7 +140,8 @@ img {
                         <p>Género: <?php echo $mostrar[3] ?></p>
                         <p>Edad recomendada: </p>
                         <p>Número de páginas: <?php echo $mostrar[4] ?></p>
-                        <button class="botones">Descargar</button>
+                        <button class="botones"><a href="https://drive.google.com/uc?export=download&id=1hkwZyU36OLtGs3olD2UV85Gg1Yclog_2">Descargar</a></button>
+
                     </div>
                 </div>
 
@@ -158,7 +159,6 @@ img {
                         <p>Género: <?php echo $mostrar[3] ?></p>
                         <p>Edad recomendada: </p>
                         <p>Número de páginas: <?php echo $mostrar[4] ?></p>
-                        <button class="botones">Descargar</button>
                     </div>
                 </div>
 
