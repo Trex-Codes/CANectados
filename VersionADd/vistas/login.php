@@ -3,8 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-    </style>
     <meta charset="utf-8">
     <title>Login CANectados</title>
     <link rel="stylesheet" href="styles.css"> 
@@ -17,18 +15,20 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
     <style type="text/css">
-
-         section{
+        body{
+            background: #a8d0db;
+        }
+        section{
+            padding-top:14%;
+            padding-bottom: 14%;
             box-sizing:border-box;
-            padding-bottom: 191px;
             font-family: 'Patrick Hand', cursive;
             background: #a8d0db;
             text-align: center;
-            padding-top: 191px;
             width: 100%;
             height: auto
             }
-
+        
         .btnAdmin {
             background-color: #5B95BE;
     
@@ -51,16 +51,33 @@
 
         article {
             height: 20%;
+            text-align: center;
         }
 
         .redirex:hover {
             color: white;
         }
-
-        section {
-            padding: 140px;
+        @media screen and (max-width: 1080px){
+        .botones{
+            width:80%;
         }
-
+        section{
+            padding-top:40%;
+            padding-bottom:40%;
+        }
+        header{
+            font-size:1.5rem;
+        }
+        footer{
+            font-size:1.3rem;
+        }
+        #bienvenida{
+            font-size: 5rem;
+        }
+        label{
+            font-size: 1.5rem;
+        }
+        }
     </style>
 </head>
 <body>
@@ -92,7 +109,7 @@
                     <a class="redirex" type="button" href="index.php">Regresar</a> <br>
 
 
-                <button class="btnAdmin"><a href=".//infotablas.php">funcion Admin</a></button>
+            <!-- <button class="btnAdmin"><a href=".//infotablas.php">funcion Admin</a></button>-->
             </article>
         </section>
         <footer>

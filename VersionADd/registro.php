@@ -12,16 +12,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
 
     <style>
-
-        section {
-            height: 100%;
-            padding: 0px;
-
-            padding-bottom: 30px;
+    @media screen and (max-width: 1080px){
+        .contenedor{
+            padding-top: 24%;
+            padding-bottom:24%;
+        }
+        #bienvenida{
+            font-size: 12rem;
+        }
+        form>*{
+            font-size: 3rem;
+        form{
+            width: 5%;
+        }
+        #redirex, #botones{
+            height: 40px;
+            width: 50%;
+            font-size: 70px;
+        }
+        }
+        
+            body{
+                background: #a8d0db;
+            }
+            section{
+            box-sizing:border-box;
+            padding-bottom: 191px;
+            font-family: 'Patrick Hand', cursive;
+            background: #a8d0db;
+            text-align: center;
+            padding-top: 191px;
+            width: 100%;
+            height: auto;
+            }
+            .botones{
+            height: 80px;
+            width: 50%;
+            font-size: 40px}
+            .redirex{
+                font-size: 40px;
+            }
+    }        
+    @media screen and (min-width: 353px){
+        section{
+            padding-top: 8%;
+            padding-bottom: 8%;
+        
+        }
         }
 
         .botones {
-                margin-top: 15px;
+                margin-top: 70px;
+                
         }
         
         .error {
@@ -42,26 +84,6 @@
 
             padding: 10px;
         }
-
-         section {
-            height: 100%;
-            padding-bottom: 20px;
-            }
-
-        .botones {
-            margin-top: 15px;
-            text-align: center;
-        }
-        section{
-            box-sizing:border-box;
-            padding-bottom: 98px;
-            font-family: 'Patrick Hand', cursive;
-            background: #a8d0db;
-            text-align: center;
-            padding-top: 98px;
-            width: 100%;
-            height: auto
-        }
         .redirex{
             transition: background-color .5s;
             text-decoration: none;
@@ -71,7 +93,6 @@
         .redirex:hover {
             color: white;
         }
-
 
     </style>
 </head>
@@ -95,19 +116,19 @@
                 }
 
                 if($EdadUsuario == "" ){
-                    array_push($Campos, "La edad no puede estar vacío");
+                    array_push($Campos, "La edad no puede estar vacía");
                 }
 
                 if($NicknameUsuario == ""){
-                    array_push($Campos, "El correo no puede estar vacio");
+                    array_push($Campos, "El correo no puede estar vacío");
                 }
 
                 if($passwordUsuario =="") {
-                    array_push($Campos, "La contraseña no puede estar vacia");
+                    array_push($Campos, "La contraseña no puede estar vacía");
                 }
 
                 if($CorreoUsuario == "") {
-                    array_push($Campos, "El correo no puede estar vacio");
+                    array_push($Campos, "El correo no puede estar vacío");
                 }
 
 
@@ -157,7 +178,7 @@
  <header id="Encabezado">
         <h7 id="titulo">CANectados</h7>
     </header>
-    <section>
+    <section class="contenedor">
         <h1 id="bienvenida">CANectados</h1>
         <article class="content">
 
@@ -178,7 +199,7 @@
                 <label for="Correo">Correo: </label>
                 <input class="formulario" type="email" id="Correo" name="CorreoUsuario" placeholder="Correo electronico" >
 
-                <input type="submit" class="botones" name="submitInfo" value="registrarse">
+                <input type="submit" class="botones" name="submitInfo" value="Registrarse">
             </form>
             <a class="redirex" type="button" href="index.php">Regresar</a>
 

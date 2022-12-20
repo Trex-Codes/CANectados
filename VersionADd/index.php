@@ -14,24 +14,38 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Patrick+Hand&family=Teko:wght@600&display=swap" rel="stylesheet">
     <style type="text/css">
-            section{
-            box-sizing:border-box;
-            padding-bottom: 191px;
-            font-family: 'Patrick Hand', cursive;
-            background: #a8d0db;
-            text-align: center;
-            padding-top: 191px;
-            width: 100%;
-            height: auto
-}
-</style>
+    .contenedor{
+        padding-bottom: 15%;
+        padding-top: 15%;
+    }
+    @media screen and (max-width: 1080px){
+        .contenedor{
+            padding-top: 35%;
+            padding-bottom:35%;
+        }
+        .botones{
+            height: 40px;
+            width: 80%;
+            font-size: 70px;
+        }
+        #bienvenida{
+            font-size: 8rem;
+        }
+        #descripcion{
+            font-size: 6rem;
+        }
+        #desicion{
+            font-size: 4rem;
+        }
+    }
+    </style>
 </head>
 <body>
     <div class="container">
         <header id="Encabezado">
             <h7 id="titulo">CANectados</h7>
         </header>
-        <section>
+        <section class="contenedor">
             <h1 id="bienvenida">Bienvenido a CANectados</h1>
             <h2 id="descripcion">Tu biblioteca virtual favorita, diseñada por y para estudiantes</h2>
             <h3 id="desicion">¿Qué deseas hacer?</h3>

@@ -5,9 +5,6 @@
     list-style: none;
     box-sizing: border-box;
 }
-body{
-    background-color: #a8d0db;
-}
 article{
     height: 100%;
     box-sizing:border-box;
@@ -40,6 +37,7 @@ section{
 }
 #bienvenida{
     font-size: 80px;
+    width: 100%;
 }
 #descripcion{
     font-size: 40px;
@@ -58,12 +56,14 @@ section{
     background-color: #1883ba;
     border-radius: 6px;
     border: 2px solid #0016b0;
-    width: 10%;
 }
 .botones:hover{
     color: #1883ba;
     background-color: #ffffff;
   }
+body{
+    background-color: #a8d0db;
+}
 footer{
     overflow: hidden;
     box-sizing:border-box;
@@ -75,9 +75,11 @@ footer{
     text-align: center;
     line-height: 100px;
     color:white;
-    font-size: xx-large;
+    font-size: 3rem;
+    align-self: flex-end;
 }
 .base{
+    align-self: flex-end;
     transition: background-color .5s;
     text-decoration: none;
     color:#ffffff
@@ -118,7 +120,7 @@ form > label {
     padding-left: 10%
 }
 .nexp{
-    padding-top: 8%;
+    padding-top: 6%;
     background: #a8d0db;
     padding-bottom: 2%
 }
@@ -148,7 +150,7 @@ form > label {
     padding-bottom: 2%;
 }
 .nexp{
-    display: flex;
+    float:center;
 }
 .caratula{
     align-items: center;
@@ -198,22 +200,6 @@ li a.active, li a:hover{
 }
 #check{
     display: none;
-}
-@media screen and (max-width:1000px) {
-    footer{
-        font-size: 1.3rem;
-    }
-    .botones{
-        width: 20%;
-    }
-}
-@media screen and (max-width:500px) {
-    .botones{
-        font-size: 12px;
-    }
-    section{
-        font: 80px;
-    }
 }
 .disclaimer {
     visibility: hidden;
